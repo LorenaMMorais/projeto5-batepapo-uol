@@ -15,30 +15,55 @@
         <header>
             <nav>
                 <img class="logo" src="imagens/logo-chat-uol.svg" alt="Logo do chat da Uol">
-                <ion-icon name="people"></ion-icon>
+                <ion-icon name="people" onclick="aparecerSidebar()"></ion-icon>
             </nav>
         </header>
+
         <main>
-            <div class="notificacao entrada-saida">
+            <div class="notificacao mensagem-status">
                 <p><small>(09:21:45) </small><b>João</b> entra na sala...</p>
             </div>
-            <div class="notificacao mensagem">
+            <div class="notificacao mensagem-normal">
                 <p><small>(09:22:28) </small><b>João</b> para <b>Todos:</b> Bom dia</p>
             </div>
-            <div class="notificacao mensagem">
+            <div class="notificacao mensagem-normal">
                 <p><small>(09:22:38) </small><b>Maria</b> para <b>João:</b> Oi João:)</p>
             </div>
-            <div class="notificacao mensagem-privada">
+            <div class="notificacao mensagem-reservada">
                 <p><small>(09:22:48) </small><b>João</b> reservadamente para <b>Maria:</b> Oi gatinha quer tc?</p>
             </div>
-            <div class="notificacao entrada-saida">
+            <div class="notificacao mensagem-status">
                 <p><small>(09:22:58) </small><b>Maria</b> sai da sala...</p>
             </div>
         </main>
+
         <footer>
             <input type="text" placeholder="Escreva aqui...">
             <ion-icon name="paper-plane-outline"></ion-icon>
         </footer>
+
+        <aside onclick="desaparecerSidebar()">
+            <div class="conteudo-sidebar">
+                <section>
+                    <div class="titulo-secao">
+                        <p>Escolha um contato<br/>para enviar mensagem:</p>
+                    </div>
+                    <p class="todos-usuarios-sidebar"><ion-icon name="people"></ion-icon> Todos</p>    
+                    <p class="usuarios-sidebar"><ion-icon name="person-circle"></ion-icon> João</p>
+                    <p class="usuarios-sidebar"><ion-icon name="person-circle"></ion-icon> Maria</p>
+                </section>
+                <section>
+                    <div class="titulo-secao">
+                        <p>Escolha a visibilidade:</p>
+                    </div>
+                    <div class="opcoes-visibilidade">
+                        <p class="modo-publico"><ion-icon name="lock-open"></ion-icon> Público</p>
+                        <p class="modo-reservado"><ion-icon name="lock-closed"></ion-icon> Reservadamente</p>
+                    </div>
+                </section>
+            </div>
+        </aside>
+
         <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
         <script src="scripts.js"></script>
     </body>
