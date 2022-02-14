@@ -39,8 +39,8 @@
             </main>
 
             <footer>
-                <input class="mensagem" type="text" placeholder="Escreva aqui...">
-                <button type="button|submit" value="Submit" onclick="addMensagem()"><ion-icon name="paper-plane-outline"></ion-icon></button>
+                <input class="mensagem" data-identifier="message" type="text" placeholder="Escreva aqui...">
+                <button type="button|submit" value="Submit" onclick="addMensagem()" data-identifier="send-message"><ion-icon name="paper-plane-outline"></ion-icon></button>
             </footer>
         </div>
 
@@ -50,17 +50,17 @@
                     <div class="titulo-secao">
                         <p>Escolha um contato<br/>para enviar mensagem:</p>
                     </div>
-                    <p class="todos-usuarios-sidebar"><ion-icon name="people"></ion-icon> Todos</p>    
-                    <p class="usuarios-sidebar"><ion-icon name="person-circle"></ion-icon> João</p>
-                    <p class="usuarios-sidebar"><ion-icon name="person-circle"></ion-icon> Maria</p>
+                    <p class="todos-usuarios-sidebar" data-identifier="participant"><ion-icon name="people"></ion-icon> Todos</p>    
+                    <p class="usuarios-sidebar" data-identifier="participant"><ion-icon name="person-circle"></ion-icon> João</p>
+                    <p class="usuarios-sidebar" data-identifier="participant"><ion-icon name="person-circle"></ion-icon> Maria</p>
                 </section>
                 <section>
                     <div class="titulo-secao">
                         <p>Escolha a visibilidade:</p>
                     </div>
                     <div class="opcoes-visibilidade">
-                        <p class="modo-publico"><ion-icon name="lock-open"></ion-icon> Público</p>
-                        <p class="modo-reservado"><ion-icon name="lock-closed"></ion-icon> Reservadamente</p>
+                        <p class="modo-publico" data-identifier="visibility"><ion-icon name="lock-open"></ion-icon> Público</p>
+                        <p class="modo-reservado" data-identifier="visibility"><ion-icon name="lock-closed"></ion-icon> Reservadamente</p>
                     </div>
                 </section>
             </div>
