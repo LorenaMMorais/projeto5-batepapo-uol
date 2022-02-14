@@ -12,37 +12,39 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
     </head>
     <body>  
-        <header>
-            <nav>
-                <img class="logo" src="imagens/logo-chat-uol.svg" alt="Logo do chat da Uol">
-                <ion-icon name="people" onclick="aparecerSidebar()"></ion-icon>
-            </nav>
-        </header>
+        <div class="conteudo escondido">
+            <header>
+                <nav>
+                    <img class="logo" src="imagens/logo-chat-uol.svg" alt="Logo do chat da Uol">
+                    <button onclick="chamarSidebar()"><ion-icon name="people"></ion-icon></button>
+                </nav>
+            </header>
 
-        <main>
-            <div class="notificacao mensagem-status">
-                <p><small>(09:21:45) </small><b>João</b> entra na sala...</p>
-            </div>
-            <div class="notificacao mensagem-normal">
-                <p><small>(09:22:28) </small><b>João</b> para <b>Todos:</b> Bom dia</p>
-            </div>
-            <div class="notificacao mensagem-normal">
-                <p><small>(09:22:38) </small><b>Maria</b> para <b>João:</b> Oi João:)</p>
-            </div>
-            <div class="notificacao mensagem-reservada">
-                <p><small>(09:22:48) </small><b>João</b> reservadamente para <b>Maria:</b> Oi gatinha quer tc?</p>
-            </div>
-            <div class="notificacao mensagem-status">
-                <p><small>(09:22:58) </small><b>Maria</b> sai da sala...</p>
-            </div>
-        </main>
+            <main>
+                <div class="notificacao mensagem-status">
+                    <p><small>(09:21:45) </small><b>João</b> entra na sala...</p>
+                </div>
+                <div class="notificacao mensagem-normal">
+                    <p><small>(09:22:28) </small><b>João</b> para <b>Todos:</b> Bom dia</p>
+                </div>
+                <div class="notificacao mensagem-normal">
+                    <p><small>(09:22:38) </small><b>Maria</b> para <b>João:</b> Oi João:)</p>
+                </div>
+                <div class="notificacao mensagem-reservada">
+                    <p><small>(09:22:48) </small><b>João</b> reservadamente para <b>Maria:</b> Oi gatinha quer tc?</p>
+                </div>
+                <div class="notificacao mensagem-status">
+                    <p><small>(09:22:58) </small><b>Maria</b> sai da sala...</p>
+                </div>
+            </main>
 
-        <footer>
-            <input type="text" placeholder="Escreva aqui...">
-            <ion-icon name="paper-plane-outline"></ion-icon>
-        </footer>
+            <footer>
+                <input class="mensagem" type="text" placeholder="Escreva aqui...">
+                <button type="button|submit" value="Submit" onclick="addMensagem()"><ion-icon name="paper-plane-outline"></ion-icon></button>
+            </footer>
+        </div>
 
-        <aside onclick="desaparecerSidebar()">
+        <aside class="escondido" onclick="desaparecerSidebar()">
             <div class="conteudo-sidebar">
                 <section>
                     <div class="titulo-secao">
@@ -64,6 +66,15 @@
             </div>
         </aside>
 
+        <div class="tela-de-entrada">
+            <div class="tela-entrada">
+                <img src="imagens/logo-chat-uol.svg" alt="Logo do chat da Uol">
+                <input data-identifier="enter-name" class="login" type="text" placeholder="Digite seu nome">
+                <button class="botao-entrar" onclick="fazerLogin()" data-identifier="start"><p>Entrar</p></button>
+            </div>
+        </div>
+    
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
         <script src="scripts.js"></script>
     </body>

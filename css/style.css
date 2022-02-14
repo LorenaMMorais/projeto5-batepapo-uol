@@ -8,7 +8,7 @@ html{
 }
 body{
     max-width: 375px;
-    height: 100vw;
+    height: 100vh;
     margin: 0 auto;
     background-color: #f3f3f3;
 }
@@ -39,11 +39,15 @@ header img{
     left: 22px;
 }
 header ion-icon{
+    font-size: 45px;    
+}
+header button{
+    border: none;
+    background-color: #FFFFFF;
     position: absolute;
-    font-size: 45px;
+    font-size: 45px;   
     right: 21px;
     top: 18px;
-    
 }
 main{
     margin-top: 80px;
@@ -118,8 +122,11 @@ input:focus{
     font-size: 18px;
 }
 footer ion-icon{
-    position: absolute;
     font-size: 26px;
+}
+footer button{
+    position: absolute;
+    background-color: #FFFFFF;
     right: 27px;
     top: 27px;
 }
@@ -160,7 +167,7 @@ aside{
     color: #000000;
 }
 .usuarios-sidebar { 
-    display: none;
+    display: flex;
     justify-content: start;
     align-items: center;
     margin-top: 1px;
@@ -222,3 +229,62 @@ aside ion-icon{
 ::-webkit-scrollbar {
     display: none;
 }
+
+.escondido{
+    display: none;
+}
+
+/*Bônus tela de entrada*/
+
+.tela-de-entrada{
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 100%;
+    padding: 57px;
+}
+.tela-entrada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tela-entrada img{
+    margin-top: 25px;
+}
+.tela-entrada input{
+    margin-top: 94px;
+    width: 261px;
+    height: 54px;
+    background: #FFFFFF;
+    border: 1px solid #D7D7D7;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+.tela-entrada input::-webkit-input-placeholder {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #AEAEAE;
+    text-align: center;
+}
+.tela-entrada button{
+    margin-top: 15px;
+    width: 109px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E7E7E7;
+    border-radius: 9px;
+    border: none;
+}
+.tela-entrada button p{
+    font-weight: 400s;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #696969;
+
+} 
